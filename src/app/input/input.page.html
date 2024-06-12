@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input [(ngModel)]="name" name="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input [(ngModel)]="lstname" name="lstname" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Numéro de téléphone</ion-label>
+      <ion-input [(ngModel)]="tel" name="tel" type="tel" maxlength="8" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input [(ngModel)]="adr" name="adr" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Submit</ion-button>
+  </form>
+</ion-content>
+
+

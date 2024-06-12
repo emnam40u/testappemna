@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Greeting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Profile Icon Field -->
+  <div class="ion-text-center">
+    <!-- Replace 'profile-icon' with your actual icon name -->
+    <ion-icon name="person-circle-outline" size="large"></ion-icon>
+    <h1>Bienvenue {{ name + ' ' + lstname}} !</h1>
+  </div>
+
+  <!-- Table to Display Information -->
+  <ion-card>
+    <h2 class="ion-text-center">Informations personelles</h2>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>Prénom:</ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>{{ name }}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>Nom:</ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>{{ lstname }}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>Numéro de téléphone:</ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>{{ tel }}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>Adresse:</ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>{{ adr }}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-text>Email:</ion-text>
+          </ion-col>
+          <ion-col size="6">
+            <ion-text>{{ email }}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Logout Button -->
+  <ion-button expand="block" color="danger" >Logout</ion-button>
+
+</ion-content>
+
+
+<ion-tabs>
+  
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="input" routerLink="../../../../../../tabs/input">
+      <ion-icon name="square"></ion-icon>
+      <ion-label>Input</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="tab1" routerLink="../../../../../../tabs/tab1">
+      <ion-icon name="triangle"></ion-icon>
+      <ion-label>List</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" routerLink="../../../../../../tabs/tab2">
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+

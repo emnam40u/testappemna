@@ -1,0 +1,37 @@
+/* tab1.page.scss */
+
+ion-item-divider {
+    background-color: #f0f0f0; /* Light grey background for dividers */
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .today-family-item {
+    background-color: #d1e7dd; /* Light green background for today's families */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .other-days-family-item {
+    background-color: #ffffff; /* White background for other days' families */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  ion-label h2 {
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+  
+  ion-label p {
+    font-size: 0.9em;
+    margin: 2px 0;
+  }
+  
+  ion-list {
+    padding: 0 10px;
+  }
+  

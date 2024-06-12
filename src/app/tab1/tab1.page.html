@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tâches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider>
+      <ion-label><h1>Aujourd'hui</h1></ion-label>
+    </ion-item-divider>
+    <!-- Display families to be fed today -->
+    <ion-item class="today-family-item" *ngFor="let family of todayFamilies">
+      <ion-label>
+        <h2>{{ family.lastName }}</h2>
+        <p>{{ family.address }}</p>
+        <p>{{ family.phoneNumber }}</p>
+        <p>Menu: {{ family.Menu }}</p>
+        <p>Prix: {{ family.Prix + 'dt' }}</p>
+        <p>Nb: {{ family.Nb }}</p>
+        <p>Date: {{ family.Date | date }}</p>
+        <p>Total: {{ calculateTotal(family) + 'dt' }}</p> <!-- Display the total -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>
+      <ion-label><h1>Reste de la semaine</h1></ion-label>
+    </ion-item-divider>
+    <!-- Display families to be fed on other days -->
+    <ion-item class="other-days-family-item" *ngFor="let family of otherDaysFamilies">
+      <ion-label>
+        <h2>{{ family.lastName }}</h2>
+        <p>{{ family.address }}</p>
+        <p>{{ family.phoneNumber }}</p>
+        <p>Menu: {{ family.Menu }}</p>
+        <p>Prix: {{ family.Prix + 'dt' }}</p>
+        <p>Nb: {{ family.Nb }}</p>
+        <p>Date: {{ family.Date | date }}</p>
+        <p>Total: {{ calculateTotal(family) + 'dt' }}</p> <!-- Display the total -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
